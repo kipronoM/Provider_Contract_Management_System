@@ -1,0 +1,88 @@
+.reports-page {
+    padding: 20px;
+  }
+  
+  .reports-filters {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .reports-filter-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .reports-filter-group label {
+    margin-right: 10px;
+  }
+  
+  .reports-filter-group select,
+  .reports-filter-group input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .reports-search-button,
+  .reports-download-button {
+    padding: 10px 20px;
+    background-color: #AC202D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Added to ensure the buttons do not stretch */
+  }
+  
+  .reports-search-button:hover,
+  .reports-download-button:hover {
+    background-color: #B8414C;
+  }
+  
+  .report-results {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .reports-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .reports-table th,
+  .reports-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .reports-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  .status.active {
+    color: green;
+  }
+  
+  .status.expiring {
+    color: orange;
+  }
+  
+  .status.expired {
+    color: red;
+  }
+  
+  .reports-download-section {
+    text-align: right;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
