@@ -1,141 +1,162 @@
+
+
 .admin-homepage {
-  display: flex;
-  flex-direction: column;
   padding: 20px;
-  background-color: #f9f9f9;
 }
 
-.admin-section {
-  padding: 20px;
-  background-color: #fff;
-  margin: 20px 0;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.admin-section h2 {
-  margin-top: 0;
+h1, h2 {
+  text-align: center;
   margin-bottom: 20px;
-  font-size: 24px;
 }
 
-.report-cards, .user-management, .contract-management {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.report-card, .user-card, .contract-card {
-  flex: 1 1 calc(50% - 20px);
-  background-color: #f1f1f1;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.report-card h3, .user-card h3, .contract-card h3 {
-  margin-top: 0;
-}
-
-button {
-  background-color: #AC202D;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #B8414C;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input, .form-group select {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.add-user-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.add-user-form .form-group {
-  flex: 1;
-}
-
-table {
+.styled-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin: 25px 0;
+  font-size: 1.2em;
+  text-align: left;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
 }
 
-table, th, td {
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 8px;
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
   text-align: left;
 }
 
-th {
-  background-color: #f2f2f2;
+.styled-table th {
+  background-color: #740808;
+  color: white;
 }
 
-.standard-button {
-  width: 150px;
-  display: inline-block;
+.styled-table tr {
+  background-color: #f3f3f3;
 }
 
-button.delete-button {
-  margin-left: 10px;
+.styled-table tr:nth-of-type(even) {
+  background-color: #f9f9f9;
 }
 
-.overlay {
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn {
+  background-color: #009879;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-cancel {
+  background-color: #e74c3c;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-edit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-toggle {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-toggle:hover {
+  background-color: #0b7dda;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
+}
+
+.modal form {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal input, .modal select {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-input {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filter-button, .add-user-button {
+  background-color: hsla(0, 86%, 29%, 0.884);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+}
+
+.filter-button:hover, .add-user-button:hover {
+  background-color: #007f67;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-form {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
-.add-user-panel {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  width: 100%;
-}
-
-.add-user-panel h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-input {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
 }
